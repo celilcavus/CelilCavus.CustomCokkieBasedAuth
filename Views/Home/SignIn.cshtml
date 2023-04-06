@@ -1,0 +1,24 @@
+@model UserSignInModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cookie</title>
+</head>
+
+<body>
+    <form asp-action="SignIn" asp-controller="Home" method="post">
+        <input type="text" asp-for="@Model.UserName">
+        <input type="text" asp-for="@Model.Password">
+        <input type="checkbox" asp-for="@Model.Remember">
+
+        <div>
+            <button type="submit">Giriş Yap</button>
+        </div>
+    </form>
+</body>
+
+</html>
